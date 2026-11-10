@@ -99,7 +99,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 /* Retrato recortado na frente de um arco iluminado */
 .portrait { position: relative; margin: 0; justify-self: center; width: min(100%, 480px); display: grid; justify-items: center; align-items: end; }
 .arch {
-  position: absolute; left: 0; right: 0; bottom: 0; height: 74%;
+  position: absolute; left: 0; right: 0; bottom: 0; height: 84%;
   border-radius: 999px 999px 0 0;
   background:
     radial-gradient(ellipse 70% 55% at 50% 35%, color-mix(in srgb, var(--glow) 50%, transparent), transparent 70%),
@@ -109,7 +109,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 }
 .portrait picture { position: relative; display: block; }
 .portrait img {
-  display: block; height: clamp(440px, 76vh, 780px); width: auto; max-width: none;
+  display: block; height: clamp(400px, 62vh, 600px); width: auto; max-width: none;
   filter: drop-shadow(0 24px 34px rgba(0,0,0,.55));
   animation: rise .9s cubic-bezier(.2,.7,.2,1) both;
 }
@@ -120,7 +120,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @media (max-width: 860px) {
   .hero .wrap { grid-template-columns: 1fr; }
   .portrait { order: -1; width: min(100%, 380px); }
-  .portrait img { height: clamp(380px, 62vh, 520px); }
+  .portrait img { height: clamp(320px, 48vh, 420px); }
   .hero-text { padding-bottom: 56px; }
   .tag { bottom: 10%; }
 }
