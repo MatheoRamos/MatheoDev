@@ -194,7 +194,11 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* ---------- Planos ---------- */
 .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.plan { border: 1px solid color-mix(in srgb, var(--stage-ink) 16%, transparent); border-radius: 18px; padding: 28px; display: grid; grid-template-rows: auto auto 1fr auto; gap: 16px; }
+.plan { border: 1px solid color-mix(in srgb, var(--stage-ink) 16%, transparent); border-radius: 18px; padding: 28px; display: grid; grid-template-rows: auto auto auto 1fr auto auto; gap: 16px; }
+.plan .desc { font-size: 15px; color: var(--stage-muted); }
+.plan.pick .desc { color: var(--glow-ink); opacity: .8; }
+.plan .fine { font-size: 14px; padding: 12px 14px; border-radius: 12px; background: color-mix(in srgb, var(--stage-ink) 7%, transparent); }
+.plan.pick .fine { background: color-mix(in srgb, var(--glow-ink) 10%, transparent); }
 .plan.pick { background: var(--glow); color: var(--glow-ink); border-color: var(--glow); }
 .plan h3 { font-size: 26px; font-weight: 700; }
 .plan .price { font-family: var(--mono); font-size: 14px; color: var(--stage-muted); }
@@ -227,7 +231,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .note { font-family: var(--mono); font-size: 12px; color: var(--stage-muted); margin-top: 6px; }
 @media (max-width: 760px) { .cta { grid-template-columns: 1fr; } }
 
-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-block: 28px; font-size: 14px; color: var(--stage-muted); border-top: 1px solid color-mix(in srgb, var(--stage-ink) 10%, transparent); }
+.social { display: flex; flex-wrap: wrap; gap: 20px; }
+.social a { text-decoration: none; transition: color .2s; }
+.social a:hover { color: var(--glow); }
+footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-block: 28px; font-size: 14px; color: var(--stage-muted); border-top: 1px solid color-mix(in srgb, var(--stage-ink) 10%, transparent); }
 
 /* =====================================================================
    Animações e interações
